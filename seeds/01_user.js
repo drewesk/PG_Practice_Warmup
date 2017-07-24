@@ -6,20 +6,32 @@ exports.seed = function(knex, Promise) {
 
         const users = [
           {
-            name: 'Rob',
+            name: 'testingBot1',
             email: 'rob@zombie.com',
             password: bcrypt.hashSync('testpass123'),
             created_at: new Date()
           },
           {
-            name: 'CJ',
-            email: 'C@J.com',
+            name: 'testingBot2',
+            email: 'wertyui@ertyu.com',
             password: bcrypt.hashSync('testpass123'),
             created_at: new Date()
           },
           {
-            name: 'testingBot',
+            name: 'testingBot3',
             email: 'test@test.com',
+            password: bcrypt.hashSync('testpass123'),
+            created_at: new Date()
+          },
+          {
+            name: 'hey',
+            email: 'hey@hey.com',
+            password: bcrypt.hashSync('testpass123'),
+            created_at: new Date()
+          },
+          {
+            name: 'testingBot5',
+            email: 'tesdfst@sdftest.com',
             password: bcrypt.hashSync('testpass123'),
             created_at: new Date()
           }
