@@ -11,7 +11,7 @@ module.exports = {
     return knex('user')
                 .where('email', email)
                 .first()
-                .distinct('id', 'name', 'email', 'is_active');
+                .distinct('id', 'name', 'email', 'password', 'is_active');
   },
   create: (user) => {
     return knex('user')

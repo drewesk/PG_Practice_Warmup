@@ -46,18 +46,19 @@ router.post('/login', (req, res, next) => {
   if (valid(req.body)) {
     User.getOneByEmail(req.body.email)
       .then((user) => {
-        console.log(user);
+        console.log(user, req.body.password, user.password);
         if (user) {
           bcrypt.compare(req.body.password, user.password)
             .then((result) => {
-              if(result) {
+              if (result) {
                 res.json({
-                    message: "logged in!!!!!!!!"
+                    user: user.id,
+                    message: "logged in 🤡!!!!!!!!"
                 });
               } else {
                 next(new Error('Invalid Login'));
               }
-            });
+            }).catch(next);
         } else {
           next(new Error('Invalid Login'));
         }
