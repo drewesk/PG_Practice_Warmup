@@ -14,3 +14,16 @@ ERROR:  relation "user" does not exist
 STATEMENT:  TRUNCATE "user" RESTART IDENTITY CASCADE;
 ERROR:  relation "user" does not exist
 STATEMENT:  TRUNCATE "user" RESTART IDENTITY CASCADE;
+LOG:  incomplete startup packet
+LOG:  incomplete startup packet
+ERROR:  duplicate key value violates unique constraint "user_email_unique"
+DETAIL:  Key (email)=(test@test.com) already exists.
+STATEMENT:  insert into "user" ("created_at", "email", "name", "password") values ($1, $2, $3, $4), ($5, $6, $7, $8), ($9, $10, $11, $12), ($13, $14, $15, $16), ($17, $18, $19, $20)
+LOG:  autovacuum launcher shutting down
+LOG:  received smart shutdown request
+LOG:  shutting down
+LOG:  database system is shut down
+LOG:  database system was shut down at 2017-07-24 10:25:09 MDT
+LOG:  MultiXact member wraparound protections are now enabled
+LOG:  database system is ready to accept connections
+LOG:  autovacuum launcher started
