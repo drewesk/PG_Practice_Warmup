@@ -1,0 +1,1 @@
+{  "name": "Article API",  "version": "1.0.0",  "description": "Article Restful API",  "sampleUrl": false,  "defaultVersion": "0.0.0",  "apidoc": "0.3.0",  "generator": {    "name": "apidoc",    "time": "2017-07-27T16:57:04.857Z",    "url": "http://apidocjs.com",    "version": "0.17.6"  }}
