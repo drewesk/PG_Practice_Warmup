@@ -18,9 +18,9 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', auth);
+app.use('/auth', auth);
 app.use('/users', users);
-app.use('/resource', article)
+app.use('/', article)
 
 app.use(function(req, res, next) {
   const err = new Error('Not Found');
